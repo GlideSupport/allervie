@@ -1,0 +1,204 @@
+.providers-section {
+
+	a.loadmore-btn,
+	a:visited.loadmore-btn {
+		min-width: 260px;
+		margin-top: 80px;
+	}
+}
+
+.prdr-type,
+.prdr-location {
+	text-transform: uppercase;
+	letter-spacing: 0.64px;
+
+	@include font(jsfn , sbold);
+
+}
+
+.prdr-type {
+	margin-bottom: 3px;
+}
+
+.prdr-location {
+	margin-top: 15px;
+	margin-bottom: 5px;
+}
+
+.prdr-title, .prdr-title.heading-6 {
+	margin-bottom: 18px;
+}
+
+a.prdr-sngl,
+.prdr-sngl {
+
+	@include column(4, 2%);
+	border-bottom: none;
+	color: map-get($map: $colors, $key: gray_80);
+
+	&:nth-child(n + 5) {
+		margin-top: 52px;
+	}
+
+	&:hover {
+		color: map-get($map: $colors, $key: gray_80);
+	}
+
+	&.location-provider {
+
+		@include column(3, 2%);
+	}
+}
+
+.location-provider {
+
+	a {
+		margin-top: 0 !important;
+	}
+}
+
+.provider-teaser {
+	max-width: 1120px;
+	margin: 0 auto;
+	width: 90%;
+
+	a.prdr-sngl,
+	.prdr-sngl {
+		width: 100% !important;
+	}
+
+	a.loadmore-btn,
+	a:visited.loadmore-btn {
+		min-width: 158px;
+		margin-top: 0;
+	}
+
+	a.item {
+		border-bottom: 0;
+		padding-bottom: 0;
+	}
+
+}
+
+.providers-section {
+	position: relative;
+	// justify-content: center;
+
+	.owl-carousel .owl-nav {
+		position: absolute;
+		top: 90px;
+		width: 100%;
+		left: 0;
+
+		// button.owl-prev {
+		// 	left: -35px;
+		// }
+
+		// button.owl-next {
+		// 	right: -35px;
+		// }
+	}
+}
+
+.providers-section,
+.servies-section {
+
+	.owl-carousel,
+	.owl-carousel .owl-stage-outer,
+	.owl-carousel .owl-stage {
+		position: initial;
+	}
+
+	.provider-teaser {
+
+		&.owl-carousel {
+
+			&.center-provider {
+				display: flex;
+				justify-content: space-evenly;
+			}
+
+			.prdr-title {
+				max-width: 300px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+	}
+}
+
+
+.prdr-image {
+	margin: 0 auto 15px;
+	border-radius: 50%;
+	width: 260px;
+	height: 260px;
+	background-image: url(../img/default-provider-image.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: contain;
+
+	.prder-image-inner {
+		padding-top: 100%;
+		background-size: cover;
+		background-position: center;
+		border-radius: 50%;
+	}
+
+	h3 {
+		margin-bottom: 0;
+		font-size: 36px;
+	}
+
+}
+
+
+.prdr-content {
+
+	p {
+		margin-bottom: 0;
+		line-height: 1.3;
+	}
+
+	a,
+	.button
+	.small-btn {
+		margin-top: 30px;
+		padding: 11px 16px 9px 16px;
+	}
+
+	h6, .heading-6 {
+		font-size: 20px;
+	}
+}
+
+.prdrs-temp-ctn {
+
+	.prdr-content {
+		min-height: 245px;
+		position: relative;
+
+		a.button.small-btn {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+			display: inline-block;
+			width: 138px;
+		}
+	}
+}
+
+.prdr-title {
+
+	a:hover,
+	a {
+		padding: inherit;
+		color: map-get($map: $colors, $key:navy_blue);
+		border: inherit;
+		font-size: 21px;
+
+		@include font(lato, bold);
+	}
+}

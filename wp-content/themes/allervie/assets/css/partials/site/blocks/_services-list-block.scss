@@ -1,0 +1,329 @@
+.servies-section {
+
+	a.loadmore-btn,
+	a:visited.loadmore-btn {
+		min-width: 330px;
+	}
+}
+
+.srv-sngl-card {
+	border-radius: 10px;
+	background-color: map-get($map: $colors, $key: white);
+	box-shadow: 0 4px 20px rgba(10, 143, 143, 0.15);
+
+	&:nth-child(n + 5) {
+		margin-top: 30px;
+	}
+
+	@include column(4, 2%);
+}
+
+.three-columns {
+
+	.srv-sngl-card {
+
+		&:nth-child(n + 4) {
+			margin-top: 30px;
+		}
+
+		@include column(3, 1.685%);
+		overflow: hidden;
+	}
+}
+
+.servies-section {
+	position: relative;
+}
+
+#ajax-location-response, .location-items-cards {
+	min-height: 500px;
+
+	.srv-sngl-text {
+		padding-bottom: 80px;
+
+		p.heading-5 {
+			a {
+				border-bottom: 0;
+				padding-bottom: 0;
+				text-shadow: none;
+				letter-spacing: initial;
+				@include font(lato, sbold);
+				color: map-get($map: $colors, $key: navy_blue) !important;
+			}
+		}
+
+		p {
+			margin-bottom: 16px;
+
+			a,
+			a:visited {
+				border-bottom: 0;
+				padding-bottom: 0;
+				color: map-get($map: $colors, $key: gray_80);
+				letter-spacing: 0;
+
+				@include font(lato, reg);
+			}
+		}
+	}
+
+	.phone,
+	.fax,
+	.billing {
+		margin-bottom: 11px;
+
+		p {
+			margin-bottom: 0;
+
+			a,
+			a:visited {
+				border-bottom: 0;
+				padding-bottom: 0;
+				color: map-get($map: $colors, $key: gray_80);
+
+				@include font(lato, reg);
+			}
+		}
+	}
+}
+
+.srv-sngl-img {
+	position: relative;
+	height: 198px;
+
+	&.full-width {
+		padding: 0;
+	}
+
+	img {
+		height: 100%;
+		width: 100%;
+		max-width: 100%;
+		object-fit: cover;
+		padding-bottom: 0;
+		object-position: top;
+		border-radius: 10px 10px 0 0;
+
+	}
+
+	.services-catagories {
+		position: absolute;
+		top: 5px;
+		right: 10px;
+
+		.cat-btn {
+			font-size: 11px;
+			color: map-get($map: $colors, $key: white);
+			text-transform: uppercase;
+
+			@include font(jsfn, sbold);
+			line-height: 1;
+			border-radius: 100px;
+			padding: 7px 10px 5px;
+			display: inline-block;
+			width: max-content;
+
+			&.with-gdt {
+				background: linear-gradient(90deg, #3ab8bc 0%, #1a518a 100%);
+			}
+
+			&.cr-cat {
+				padding-left: 31px;
+				background-image: url(../img/clinical-small-logo.svg), linear-gradient(90deg, #3ab8bc 0%, #1a518a 100%);
+				background-repeat: no-repeat;
+				background-position: left 9px center, left center;
+			}
+		}
+	}
+
+	a,
+	a:visited {
+		border-bottom: 0;
+		padding-bottom: 0;
+		display: block;
+		height: 100%;
+	}
+
+}
+
+.three-columns {
+	.srv-sngl-img {
+		img {
+			height: 100%;
+			width: 100%;
+			max-width: 100%;
+			object-fit: cover !important;
+			padding: 0px !important;
+			object-position: top;
+			border-radius: 10px 10px 0 0;
+		}
+	}
+}
+
+.cr-tag-ctn {
+	margin-bottom: 30px;
+
+	span.cr-tag {
+		font-size: 11px;
+		color: map-get($map: $colors, $key: white);
+		text-transform: uppercase;
+
+		@include font(jsfn, sbold);
+		line-height: 1;
+		border-radius: 100px;
+		padding: 7px 10px 5px;
+		display: inline-block;
+		width: max-content;
+		padding-left: 31px;
+		background-image: url(../img/clinical-small-logo.svg), linear-gradient(90deg, #3ab8bc 0%, #1a518a 100%);
+		background-repeat: no-repeat;
+		background-position: left 9px center, left center;
+	}
+}
+
+.service-teaser.srv-cards.owl-carousel {
+
+	.srv-sngl-text {
+		min-height: 276px;
+	}
+}
+
+.srv-sngl-text {
+	position: relative;
+	padding: 20px 20px 68px;
+	height: calc(100% - 198px);
+	box-sizing: border-box;
+
+	h5,
+	.heading-5 {
+		font-size: 20px;
+		margin-bottom: 16px;
+		@include font(lato, bold);
+		color: map-get($map: $colors, $key: navy_blue);
+
+		a,
+		a:visited {
+			border-bottom: 0;
+			padding-bottom: 0;
+			text-shadow: none;
+			letter-spacing: initial;
+
+			@include font(lato, sbold);
+			color: map-get($map: $colors, $key: navy_blue);
+		}
+	}
+
+	span.button,
+	a.button {
+		position: absolute;
+		bottom: 28px;
+		left: 20px;
+	}
+
+	p {
+		display: -webkit-box;
+		-webkit-line-clamp: 4;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+		font-size: 15px;
+	}
+}
+
+.servies-section {
+
+	.owl-carousel .owl-stage-outer {
+		// padding: 0 20px !important;
+
+		.owl-item {
+			padding: 20px 15px;
+			box-sizing: border-box;
+		}
+	}
+	.srv-cards {
+		&.owl-carousel {
+			.srv-sngl-card {
+				width: 100%;
+			}
+		}
+	}
+
+	.section-head {
+		h2 {
+			margin-bottom: 30px;
+		}
+	}
+}
+
+.service-teaser {
+	max-width: 1180px;
+	margin: 0 auto;
+	width: 90%;
+
+	.srv-sngl-card {
+		width: 100%;
+		box-shadow: 0;
+	}
+}
+
+.glide-block-services-slider {
+	.service-teaser {
+		&.owl-carousel {
+			.owl-nav {
+				button {
+
+					&.owl-prev,
+					&.owl-next {
+						transform: translateY(-50%);
+					}
+				}
+			}
+		}
+	}
+}
+
+.glide-block-locations-main{
+	.servies-section{
+		p{
+			a{
+				color:map-get($map: $colors, $key: dark_text);
+				border: none;
+				br{
+					@media screen and (max-width: 1200px) {
+						display: none;
+					}
+				}
+			}
+		}
+		.phone,
+		.fax,
+		.billing {
+			align-items: start;
+			img{
+				max-width: 21px;
+				max-height: 20px;
+				margin-right: 11px;
+			}
+		}
+		@media screen and (max-width: 767px) {
+			.phone,.fax{
+				p{
+					margin-bottom: 0;
+				}
+			}
+		}
+		.service-teaser{
+			@media screen and (max-width: 747px) {
+				width:100%;
+			}
+			.srv-sngl-text{
+				min-height: 350px;
+				@media screen and (max-width: 1100px) {
+					min-height: 420px;
+				}
+				@media screen and (max-width: 767px) {
+					min-height: 340px;
+				}
+			}
+		}
+	}
+}

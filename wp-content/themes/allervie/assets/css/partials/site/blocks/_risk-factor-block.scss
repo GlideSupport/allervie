@@ -1,0 +1,24 @@
+.rsk-sngl-box {
+
+	@include column(5,2%);
+	margin-bottom: 30px;
+}
+
+.rsk-icon {
+	margin-bottom: 20px;
+	line-height: 0.67;
+}
+
+.rsk-content {
+
+	p:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.risk-factor {
+
+	.section-head {
+		margin-bottom: 58px;
+	}
+}

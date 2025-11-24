@@ -1,0 +1,283 @@
+
+.single-member {
+	position: relative;
+	margin-bottom: 40px;
+
+	.t-detail {
+		margin-top: 38px;
+		width: 49.16%;
+
+		p {
+			display: -webkit-box;
+			-webkit-line-clamp: 8;
+			-webkit-box-orient: vertical;
+			text-overflow: ellipsis;
+			overflow: hidden;
+			margin-bottom: 38px;
+			a {
+				color: map-get($map: $colors, $key:d_aquamarine );
+    			border-bottom: 1px solid map-get($map: $colors, $key:d_aquamarine );
+    			font-weight: 400;
+    			@include font(lato,reg);
+    			&:hover {
+    				border-color: transparent;
+    			}
+    			&:visited {
+					font-weight: 400;
+    				@include font(lato,reg);
+				}
+			}
+		}
+
+		h6, h2 {
+			text-transform: uppercase;
+			font-size: 18px;
+			margin-bottom: 14px;
+			letter-spacing: 1.4px;
+			color: map-get($map: $colors, $key:navy_blue);
+			@include font(lato, bold);
+		}
+
+	}
+
+	.member-name {
+
+		@include font(jsfn,sbold);
+		margin-bottom: 8px;
+	}
+
+	.designation {
+
+		@include font(jsfn, reg);
+
+		font-size: 18px;
+		margin-bottom: 0;
+	}
+}
+
+.black-container {
+
+	* {
+		color: map-get($map: $colors, $key: white);
+	}
+}
+
+.section-team-variation {
+	max-width: 1064px;
+	margin: 0 auto;
+}
+
+.single-member-detail {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	column-gap: 2%;
+	justify-content: space-between;
+	padding: 16px 0 21px;
+	color: map-get($map: $colors, $key: black80);
+	border-bottom: 1px solid map-get($map: $colors, $key: regular_text);
+
+	&:first-child {
+		border-top: 1px solid map-get($map: $colors, $key: regular_text);
+	}
+
+	h6 {
+		letter-spacing: -0.15px;
+		color: map-get($map: $colors, $key: black80);
+	}
+
+	h6,
+	p {
+		margin-bottom: 0;
+	}
+
+	.name {
+		flex: 4;
+	}
+
+	.description {
+		flex: 5;
+	}
+
+	.title {
+		flex: 2;
+	}
+}
+
+.team-detail {
+
+	max-width: 1180px;
+	max-height: 75vh;
+	// max-height: 1075px;
+	width: 95%;
+	transition: all 0.5s ease-in-out;
+	margin: 0 auto;
+	position: relative;
+	overflow-y: scroll;
+	padding: 40px;
+	border-radius: 10px;
+	box-sizing: border-box;
+	background-color: map-get($map: $colors, $key: white);
+
+
+	.team-detail-inner {
+
+		height: 100%;
+		overflow: hidden;
+
+		.mfp-close {
+			background-image: url(../img/close-blue.svg);
+		}
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
+
+		&.scroll {
+			padding-right: 0;
+
+			&::-webkit-scrollbar {
+				display: block;
+			}
+		}
+	}
+
+	.mfp-close {
+		position: absolute;
+		top: 22px;
+		right: 10px;
+		width: 20px;
+		height: 20px;
+		-webkit-transition: all 200ms;
+		-o-transition: all 200ms;
+		transition: all 200ms;
+		background-image: url(../img/close-blue.svg) !important;
+		background-position: top right;
+		opacity: 1;
+		background-repeat: no-repeat;
+		background-size: contain;
+
+		&:hover {
+			background-color: transparent;
+			cursor: pointer;
+			opacity: 0.8;
+		}
+	}
+}
+
+.single-team-popup {
+	height: 100%;
+	@media only screen and (max-width: 747px) {
+		display: flex !important;
+	}
+
+	.member-image-popup {
+		margin-right: 4.65%;
+		width: 242px;
+		height: 242px;
+		flex:242px 0 0;
+		@media only screen and (max-width: 767px) {
+			margin: 0 auto 40px;
+		}
+		@media only screen and (max-width: 480px) {
+			width: 212px;
+			height: 212px;
+			flex:212px 0 0;
+		}
+
+		.sm-popup-img {
+
+			@include background-image("default-provider-image.jpg", center, cover, no-repeat, 242px, 242px);
+			border-radius: 50%;
+			position: fixed;
+			@media only screen and (max-width: 767px) {
+				position: relative;
+			}
+			@media only screen and (max-width: 480px) {
+				width: 212px;
+				height: 212px;
+				margin: 0 auto;
+			}
+
+			h3 {
+				margin-bottom: 0;
+				font-size: 50px;
+				line-height: 1.3;
+			}
+
+		}
+	}
+
+	.single-team-content {
+		// overflow-y: scroll;
+		width: 73%;
+		height: 100%;
+		flex:1 0 0;
+		@media only screen and (max-width: 767px) {
+			width: 100%;
+			flex:100% 0 0;
+			text-align: center;
+		}
+
+		.heading-3{
+			@media only screen and (max-width: 767px) {
+				margin-bottom: 0;
+			}
+		}
+
+
+		p {
+			letter-spacing: 0.05px;
+
+			:last-child {
+				margin-bottom: 0;
+			}
+
+			a,
+			a:visited {
+				color: map-get($map: $base_colors, $key: link_color);
+				border-bottom: 1px solid map-get($map: $base_colors, $key: link_border_color);
+				padding-bottom: 2px;
+
+				&:hover {
+					color: map-get($map: $base_colors, $key: link_color_hover);
+					border-color: map-get($map: $base_colors, $key: link_border_color_hover);
+				}
+			}
+		}
+	}
+}
+
+.mfp-wrap {
+	z-index: 999999 !important;
+}
+
+.member-image {
+
+	@include background-image("default-provider-image.jpg", center, cover, no-repeat, 501px, 501px);
+	border-radius: 50%;
+
+	h3 {
+		margin-bottom: 0;
+		font-size: 85px;
+		line-height: 1.3;
+	}
+
+}
+
+a,
+a:visited {
+
+	&.loadmore-btn {
+
+		&.sm-inner {
+			padding: 16px 30px 14px 60px;
+			font-size: 14px;
+			line-height: 1.3;
+			letter-spacing: 0.96px;
+			background-image: url(../img/plus-button-icon.svg);
+			background-repeat: no-repeat;
+			background-position: top 14px left 30px;
+		}
+	}
+}

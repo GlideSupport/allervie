@@ -1,0 +1,48 @@
+{
+    "key": "group_6396dfdd9ba82",
+    "title": "Image Variations",
+    "fields": [
+        {
+            "key": "field_6396dfdf304f4",
+            "label": "Image Variations",
+            "name": "image_variations",
+            "aria-label": "",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "logo": "Logo",
+                "full": "Full Image"
+            },
+            "default_value": "logo",
+            "return_format": "value",
+            "allow_null": 0,
+            "layout": "horizontal"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "news"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1670836713
+}

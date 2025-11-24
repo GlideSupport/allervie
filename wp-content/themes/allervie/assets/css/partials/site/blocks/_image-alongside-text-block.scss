@@ -1,0 +1,130 @@
+// image positions
+
+
+.iat-image {
+	width: 49%;
+	margin-right: 5.2%;
+
+	img {
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+	}
+}
+
+.iat-text {
+	width: 42.8%;
+
+	h3, .heading-3 {
+		margin-bottom: 30px;
+		max-width: 420px;
+	}
+
+	p {
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+}
+
+.image-at-right {
+	flex-direction: row-reverse;
+
+	.iat-image {
+		margin-right: 0;
+		margin-left: 5%;
+	}
+}
+
+
+.bottom-bg-shape {
+	margin-bottom: 40px;
+
+	h3, .heading-3 {
+		margin-bottom: 28px;
+	}
+
+	.iat-text {
+		width: 40.3%;
+	}
+
+	.iat-image {
+		position: relative;
+		height: 100%;
+		object-fit: cover;
+		z-index: 2;
+
+		&::before {
+			content: "";
+			background-color: map-get($map: $colors, $key: l_aquamarine);
+			max-height: 205px;
+			height: 90%;
+			width: 114.2%;
+			position: absolute;
+			left: -7.1%;
+			bottom: -36px;
+			z-index: -1;
+		}
+	}
+}
+
+.iat-boxed {
+	box-shadow: 0 4px 20px rgba(10, 143, 143, 0.15);
+	border-radius: 10px;
+
+	.iat-image {
+		width: 39%;
+		margin-right: 0;
+
+		img {
+			border-radius: 10px 0 0 10px;
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+
+	.iat-text {
+		width: 61%;
+		padding: 30px 40px 40px;
+		border: 1px solid #3bbfc0;
+		box-sizing: border-box;
+		border-left: none;
+		background-color: map-get($map: $colors, $key: white);
+		border-radius: 0 10px 10px 0;
+
+		h4, .heading-4 {
+			color: map-get($map: $colors, $key: gray_80);
+
+			@include font(lato,bold);
+		}
+
+		a,
+		a:visited {
+
+			&.button {
+				padding: 11px 16px 9px 16px;
+			}
+		}
+
+	}
+
+	&.image-at-right {
+
+		.iat-image {
+			margin-left: 0;
+
+			img {
+				border-radius: 0 10px 10px 0;
+			}
+		}
+
+		.iat-text {
+			border: 1px solid #3bbfc0;
+			border-right: none;
+			border-radius: 10px 0 0 10px;
+		}
+	}
+}

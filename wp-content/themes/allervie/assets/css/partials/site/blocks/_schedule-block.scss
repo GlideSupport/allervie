@@ -1,0 +1,61 @@
+.schdl-sngl-card {
+
+	background-color: map-get($map: $colors, $key: white);
+	box-shadow: 0 4px 20px rgba(10, 143, 143, 0.15);
+	border-radius: 10px;
+	padding: 34px 40px 38px;
+	box-sizing: border-box;
+
+	ul {
+		margin-bottom: 0;
+		column-count: 2;
+
+		li {
+			padding: 0;
+			margin: 0 0 16px;
+
+			&::before {
+				display: none;
+			}
+		}
+	}
+
+	h5, .heading-5 {
+		margin-bottom: 30px;
+		text-transform: uppercase;
+	}
+
+	&.two-columns {
+
+		@include column(2, 2%);
+
+	}
+}
+.closure-meassage{
+	text-align: right;
+    padding: 0;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.schdl-single-col {
+
+	.schdl-sngl-card {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin-bottom: 30px;
+
+		h5 {
+			max-width: 155px;
+			width: 16%;
+		}
+
+		ul {
+			column-count: 3;
+			margin-left: 7.2%;
+			width: 75%;
+			column-gap: 15%;
+		}
+	}
+}

@@ -1,0 +1,123 @@
+.pollen-content {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	text-align: center;
+
+	.item {
+		background-color: rgba(216, 242, 242, 0.5);
+		border-radius: 10px;
+		box-sizing: border-box;
+		padding: 30px 23px;
+		border: 1px solid map-get($map: $colors, $key: aquamarine);
+		width: 15.3%;
+
+	}
+}
+
+.pollen-circles {
+	width: 134px;
+	height: 134px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	position: relative;
+	margin-bottom: 17px;
+
+	&::before,
+	&::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		width: 134px;
+		height: 134px;
+		background-image: url(../img/rotate-circle-2.svg);
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: contain;
+	}
+
+	&::after {
+		top: 6px;
+		width: 121px;
+		height: 121px;
+		background-image: url(../img/rotate-circle-2.svg);
+	}
+}
+
+.pollen-value-top {
+	background-color: #fff;
+	width: 108px;
+	height: 108px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	span {
+		font-size: 40px;
+		line-height: 1.2;
+		background: linear-gradient(38.19deg, #088d8d 8.71%, #3bbfc0 85.78%);
+		background: -webkit-linear-gradient(38.19deg, #088d8d 8.71%, #3bbfc0 85.78%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+
+		@include font(jsfn, reg);
+	}
+}
+
+.pollen-name span {
+	display: block;
+
+	@include font(lato, med);
+	color: map-get($map: $colors, $key: gray_90);
+	font-size: 22px;
+	line-height: 1.3;
+	margin-bottom: 8px;
+}
+
+.pollen-value {
+
+	span {
+		font-size: 11px;
+		line-height: 1.3;
+		letter-spacing: 0.04em;
+		text-transform: uppercase;
+		color: map-get($map: $colors, $key: white);
+		padding: 9px 16px 5px;
+		border-radius: 100px;
+		box-sizing: border-box;
+		border: 1px solid transparent;
+		display: inline-block;
+
+		@include font(jsfn, sbold);
+
+		&.low-btn {
+			background-color: map-get($map: $colors, $key: white);
+			color: map-get($map: $colors, $key: d_aquamarine);
+			border: 1px solid map-get($map: $colors, $key: aquamarine);
+		}
+
+
+		&.moderate-btn,
+		&.good-btn {
+			background-color: map-get($map: $colors, $key: aquamarine);
+			color: map-get($map: $colors, $key: white);
+			border: 1px solid map-get($map: $colors, $key: aquamarine);
+		}
+
+		&.high-btn {
+			background-color: map-get($map: $colors, $key: d_aquamarine);
+			color: map-get($map: $colors, $key: white);
+			border: 1px solid map-get($map: $colors, $key: d_aquamarine);
+		}
+
+		&.unhealthy-btn,
+		&.hazardous-btn {
+			background-color: map-get($map: $colors, $key: navy_blue);
+			color: map-get($map: $colors, $key: white);
+			border: 1px solid map-get($map: $colors, $key: navy_blue);
+		}
+	}
+}

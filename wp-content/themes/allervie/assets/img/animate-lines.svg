@@ -1,0 +1,9 @@
+	<svg class="c-dashed-line" width="880" height="240" xmlns="http://www.w3.org/2000/svg">
+								<defs>
+									<path id="c-dashed-line" d="M400  120-435 120-435" />
+								</defs>
+								<!-- A solid green line that we'll animate -->
+								<use class="c-dashed-line__path" xlink:href="#c-dashed-line" />
+								<!-- A dashed white line that sits on top of the solid green line -->
+								<use class="c-dashed-line__dash" xlink:href="#c-dashed-line" />
+							</svg>

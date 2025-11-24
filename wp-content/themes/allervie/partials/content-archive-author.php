@@ -1,0 +1,68 @@
+<?php
+/**
+ * Template part for displaying posts in an archive
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
+ * @package Allervie
+ * @since 1.0.0
+ */
+
+
+// Global variables
+global $option_fields;
+global $pID;
+global $fields;
+$pID=get_the_ID();
+$src = wp_get_attachment_image_url( get_post_thumbnail_id(  $pID ), 'thumb_900');
+if ( ! has_post_thumbnail() ) {
+	$src = esc_url( get_template_directory_uri() ) . '/assets/img/admin/defaults/default-image.webp';
+} else {
+	$src = $src;
+}
+$post_fields=get_fields_escaped($pID);
+$alrv_pagetitle_news=(isset($post_fields['alrv_pagetitle_news']) && $post_fields['alrv_pagetitle_news']!='') ? $post_fields['alrv_pagetitle_news'] : get_the_title();
+$categories=get_the_terms( $pID, 'news-cat' );
+$terms_string = join(', ', wp_list_pluck($categories, 'name'));
+$post_excerpt = get_the_excerpt( $pID );
+$alrv_news_content=(isset($post_fields['alrv_news_content'])) ? $post_fields['alrv_news_content'] : null ;
+?>
+
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'srv-sngl-card' ); ?>>
+	<a href="<?php the_permalink(); ?>" class="news-inner-card">
+		<div class="srv-sngl-img">
+			<!-- <div class="post-type-indicator"><?php //echo get_post_type(); ?></div> -->
+			<?php
+			if ( has_post_thumbnail() ) {
+				?>
+				<?php
+				the_post_thumbnail(
+					'thumb_600',
+					array(
+						'alt'   => get_the_title(),
+						'title' => get_the_title(),
+					)
+				);
+				?>
+				<?php
+			} else {
+				?>
+			<img src="<?php echo get_template_directory_uri(); ?>/assets/img/admin/defaults/default-image.webp" class=""
+				alt="<?php get_the_title(); ?>" title="<?php get_the_title(); ?>"> <?php } ?>
+		</div>
+		<div class="srv-sngl-text">
+			<h2 class="medium-text">
+			<?php echo $alrv_pagetitle_news; ?>
+			</h2>
+			<?php
+				if ( $alrv_news_content ) {
+					echo $alrv_news_content;
+				}else{
+					echo '<p>'.$post_excerpt.'</p>';
+				}
+			?>
+			<span class="button small-btn hide-on-mobile"><?php _e( 'learn more', 'alrv_td' ); ?></span>
+			<span class="learn-more show-on-mobile"><?php _e( 'learn more', 'alrv_td' ); ?></span>
+		</div>
+	</a>
+</article><!-- #post-<?php the_ID(); ?> -->

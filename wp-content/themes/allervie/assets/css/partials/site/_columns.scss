@@ -1,0 +1,58 @@
+.two-columns,
+.three-columns,
+.four-columns {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.two-columns {
+
+	.column {
+
+		@include column(2, 2%);
+
+		&:nth-child(2n + 2) {
+			margin-right: 0;
+		}
+	}
+}
+
+.three-columns {
+
+	.column {
+
+		@include column(3, 2%);
+
+		&:nth-child(3n + 3) {
+			margin-right: 0;
+		}
+	}
+}
+
+.four-columns {
+
+	.column {
+
+		@include column(4, 3%);
+
+		&:nth-child(4n + 4) {
+			margin-right: 0;
+		}
+	}
+}
+
+.five-columns {
+
+	.column {
+
+		@include column(5, 3%);
+
+		&:nth-child(5n + 5) {
+			margin-right: 0;
+		}
+	}
+}
+
+.list-column-two {
+	column-count: 2;
+}

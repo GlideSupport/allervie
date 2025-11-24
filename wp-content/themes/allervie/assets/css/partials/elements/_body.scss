@@ -1,0 +1,44 @@
+/* -------------------------------------------------
+>> Base Styles
+---------------------------------------------------
+>> Edit these styles as required
+------------------------------------------------- */
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+
+	@include font(lato, reg, family weight);
+	position: relative;
+	font-size: 18px;
+	color: map-get($map: $base_colors, $key: body_color);
+	line-height: 1.5;
+	padding-top: 90px;
+
+	&.has-header-links {
+		padding-top: 148px;
+	}
+
+	&.has-secondary-nav {
+		padding-top: 125px;
+		// padding-top: 191px;
+		&.has-header-links {
+			padding-top: 183px;
+		}
+	}
+}
+
+p {
+	margin: 0 0 30px;
+}
+
+::selection {
+	color: map-get($map: $base_colors, $key: selection_color);
+	background-color: map-get($map: $base_colors, $key: selection_bgcolor);
+}
+
+.background {
+
+	@include background-image("", right, contain, repeat, 300px, 200px);
+}

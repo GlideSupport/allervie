@@ -1,0 +1,225 @@
+.owl-dots {
+	line-height: 0.67;
+
+	.owl-dot {
+		width: 15px;
+		height: 15px;
+		border-radius: 50%;
+		border: 2px solid #3bbfc0;
+		padding: 0;
+		margin-right: 12px;
+
+		&:last-child {
+			margin-right: 12px;
+		}
+
+	}
+}
+
+.testimonial-section {
+
+	.owl-carousel {
+		position: initial;
+
+		.owl-stage-outer {
+			position: initial;
+		}
+	}
+}
+
+.testimonial-section {
+	max-width: 980px;
+	width: 80%;
+	margin: 0 auto;
+	background-color: map-get($map: $colors, $key: l_aquamarine);
+	padding: 65px 90px 52px;
+	box-sizing: border-box;
+	position: relative;
+	border-radius: 10px;
+
+	h5,
+	h6 {
+		color: map-get($map: $colors, $key: gray_80);
+	}
+
+	h5 {
+		margin-bottom: 40px;
+		line-height: 1.5;
+		letter-spacing: 0.19px;
+
+		@include font(lato,reg);
+	}
+
+	h6 {
+		margin-bottom: 0;
+	}
+}
+
+.testimonial-icon {
+	position: relative;
+	z-index: 2;
+
+	&::before {
+		content: "";
+		background-image: url(../img/testimonial-quote-icon.svg);
+		width: 48px;
+		height: 48px;
+		position: absolute;
+		top: -24px;
+		left: calc(50% - 24px);
+		background-size: 100%;
+		background-repeat: no-repeat;
+	}
+}
+
+.testimonial-section {
+
+	.owl-carousel {
+
+		.owl-nav {
+
+			button {
+
+				&.owl-prev {
+					left: -20% !important;
+				}
+
+				&.owl-next {
+					right: -20% !important;
+				}
+			}
+		}
+	}
+}
+
+.testimonial-single {
+
+	p {
+		margin-bottom: 23px;
+	}
+}
+
+/********************Custom Quote Section******************/
+.custom-quote-section {
+  .custom-quote-slider, .custom-quote-single {
+    margin: 40px 0;
+    .item {
+      display: flex;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      @media (max-width: 1360px) {
+        padding: 0 30px;
+      }
+      @media (max-width: 991px) {
+        padding: 0;
+      }
+      .left-col {
+        width: 200px;
+        position: relative;
+        margin: 10px 0;
+
+        @media (max-width: 991px) {
+          margin: 15px auto 30px;
+        }
+        .quote-icon {
+          background-image: url(../img/testimonial-quote-icon.svg);
+          width: 48px;
+          height: 48px;
+          position: absolute;
+          top: -6px;
+          right: 4px;
+          background-size: 100%;
+          background-repeat: no-repeat;
+          z-index: 6;
+        }
+      }
+      .left-image {
+        width: 200px;
+        height: 200px;
+        border-radius: 100%;
+        position: relative;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        .prdr-image {
+          width: 200px;
+          height: 200px;
+        }
+      }
+      .right-content {
+        width: calc(100% - 200px);
+        padding-left: 40px;
+        box-sizing: border-box;
+
+        @media (max-width: 991px) {
+          width: 100%;
+          padding-left: 0px;
+          text-align: center;
+        }
+      }
+    }
+    &.owl-carousel {
+      .owl-dots {
+        margin-top: 30px;
+      }
+      .owl-nav {
+        @media (max-width: 991px) {
+          display: none;
+        }
+        button.owl-prev {
+          left: -81px;
+          transform: translateY(-52px);
+          @media (max-width: 1360px) {
+            left: -45px;
+          }
+        }
+        button.owl-next {
+          right: -81px;
+          transform: translateY(-52px);
+          @media (max-width: 1360px) {
+            right: -45px;
+          }
+        }
+      }
+    }
+  }
+  &.without-image {
+    .custom-quote-slider, .custom-quote-single {
+      max-width: 850px;
+      margin: 40px auto;
+      .item {
+        .right-content {
+          position: relative;
+          width: 100%;
+          text-align: center;
+          padding: 0 30px 30px 30px;
+          max-width: 850px;
+          margin: 30px auto;
+          border: 1px solid #088d8d;
+          border-radius: 30px;
+          .quote-icon {
+            background-image: url(../img/testimonial-quote-icon.svg);
+            width: 48px;
+            height: 48px;
+            position: relative;
+            top: 0;
+            right: 0;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            z-index: 6;
+            margin: -27px auto 30px;
+          }
+        }
+      }
+      &.owl-carousel {
+        .owl-dots {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}

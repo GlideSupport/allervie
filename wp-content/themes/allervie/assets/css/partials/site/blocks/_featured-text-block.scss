@@ -1,0 +1,53 @@
+.featured-text-section {
+	padding: 183px 100px 120px;
+	background: linear-gradient(38.19deg, #088d8d 8.71%, #3bbfc0 85.78%);
+	border-radius: 10px;
+	box-sizing: border-box;
+	position: relative;
+	overflow: hidden;
+
+	&::before {
+		content: "";
+
+		position: absolute;
+		width: 370px;
+		height: 370px;
+		top: -240px;
+		left: calc(50% - 185px);
+		background-image: url(../img/circle-white-shape.svg);
+		background-repeat: no-repeat;
+		background-position: top left;
+		animation: rotation 50s infinite linear;
+
+	}
+
+	b,
+	strong,
+	p,
+	a,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		color: map-get($map: $colors, $key: white);
+	}
+
+
+	h2, .heading-h2 {
+		max-width: 780px;
+		margin: 0 auto 30px;
+		text-transform: uppercase;
+	}
+
+	.ft-text {
+
+		p:last-child {
+			margin-bottom: 0;
+		}
+
+		ul li::before {
+			filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(113deg) brightness(106%) contrast(101%);
+		}
+	}
+}

@@ -1,0 +1,34 @@
+// .sitemap-section{
+// 	margin-bottom: 10px;
+// 	.wsp-container{
+// 		column-count: 3;
+// 		gap:30px;
+// 		@media (max-width: 781px){
+// 			column-count: 1;
+// 		}
+// 		.wsp-pages-title{
+// 			font-size: 34px;
+//     		line-height: 1.25;
+//     		@media only screen and (max-width: 747px){
+//     			font-size: 26px;
+//     		}
+// 		}
+// 	}
+// }
+.sitemap-section{
+	margin-bottom: 10px;
+	.kwayy-html-sitemap-wrapper, .wsp-container{
+		column-count: 3;
+		gap:30px;
+		@media (max-width: 781px){
+			column-count: 1;
+		}
+		.kwayy-html-sitemap-post-title, h2{
+			font-size: 34px;
+    		line-height: 1.25;
+    		@media only screen and (max-width: 747px){
+    			font-size: 26px;
+    		}
+		}
+	}
+}

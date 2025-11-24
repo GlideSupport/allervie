@@ -1,0 +1,895 @@
+.banner-tab-ppc{
+  min-height: 1000px;
+  @media (max-width: 747px){
+    min-height: auto;
+  }
+  .ppc-content-ctn{
+    column-gap:50px;
+    .ppc-content{
+      margin-right: 0;
+      max-width: 500px;
+      flex:1 0 0;
+    }
+  }
+  .ppc-tab-block{
+    width: 100%;
+    max-width: 580px;
+    padding-top: 70px;
+    flex:1 0 0;
+    @media only screen and (min-width: 1004px) and (max-width: 1179px){
+      flex:480px 0 0;
+    }
+    @media (max-width: 747px){
+      padding-top: 0px;
+    }
+    .ppc-tab-title{
+      h4{
+        @include font(jsfn, med);
+        color: map-get($map: $colors, $key: white);
+        max-width: 456px;
+        @media (max-width: 747px){
+          color: #164c87;
+        }
+      }
+    }
+  }
+  .tabContainer {
+    margin: 0 auto;
+    > .ppc-tabs{
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      @media (max-width: 319px){
+        flex-wrap: wrap;
+      }
+      li{
+        margin: 0;
+        padding: 0;
+        &:before{
+          display: none;
+        }
+        @media (max-width: 319px){
+          width: 100%;
+        }
+        &:first-child{
+          a{
+             background-color: map-get($map: $colors, $key: white);
+          }
+        }
+        a{
+          display: inline-block;
+          border: 1px solid #164C87;
+          background: #fff;
+          padding: 15px 20px 12px 20px;
+          position: relative;
+          top: 1px;
+          font-size: 18px;
+          line-height: 22.5px;
+          font-weight: 500;
+          text-transform: uppercase;
+          border-radius: 8px 8px 0 0;
+          @include font(jsfn, med);
+          background-color: map-get($map: $colors, $key: white);
+          color: map-get($map: $colors, $key: navy_blue);
+          height: 100%;
+          @media only screen and (min-width: 1004px) and (max-width: 1179px){
+            padding: 16px 16px 11px;
+          }
+          @media (max-width: 574px){
+            padding: 15px 10px 12px 10px;
+            font-size: 16px;
+          }
+          @media (max-width: 475px){
+            padding:10px 10px 5px 10px !important;
+            font-size: 13px;
+            line-height: 1.2;
+          }
+          @media (max-width: 319px){
+            width: 100%;
+            border-radius: 0;
+          }
+          &.active{
+            border-bottom: 1px solid transparent;
+          }
+          span{
+            background: map-get($map: $colors, $key: navy_blue);
+            color: map-get($map: $colors, $key: white);
+            padding: 1px 4px 2px 4px;
+            border-radius: 2px;
+            font-size: 14px;
+            line-height: 17.5px;
+            position: relative;
+            top: -7px;
+            @include font(jsfn, reg);
+            left: 5px;
+            @media (max-width: 475px){
+              font-size: 11px;
+              top: -6px;
+            }
+          }
+          &.make-an-appointment{
+            background-color: map-get($map: $colors, $key: l_blue);
+          }
+        }
+      }
+    }
+    .tabContent-ppc {
+      text-align: left;
+      border: 1px solid #164C87;
+      border-top: 0;
+      border-radius: 0 8px 8px 8px;
+      @media (max-width: 375px){
+        border-radius: 0;
+      }
+      @media (max-width: 319px){
+        border-radius: 0;
+      }
+      > div:not(:first-child){
+        display: none;
+      }
+      #tab1, #tab3{
+        padding: 24px 30px 30px 30px;
+        border-radius: 0 8px 8px 8px;
+        border-top: 1px solid #164C87;
+        background-color: map-get($map: $colors, $key: white);
+        @media (max-width: 574px){
+          padding: 24px 20px 20px 20px;
+        }
+        @media (max-width: 375px){
+          border-radius: 0;
+        }
+      }
+      .make-an-appointment{
+        background-color: map-get($map: $colors, $key: l_blue) !important;
+      }
+      #tab2, #tab4{
+        padding: 24px 30px 30px 30px;
+        border-radius: 0 8px 8px 8px;
+        border-top: 1px solid #164C87;
+        background-color: map-get($map: $colors, $key: white);
+        @media (max-width: 574px){
+          padding: 24px 20px 20px 20px;
+        }
+        @media (max-width: 375px){
+          border-radius: 0;
+        }
+        .content-row{
+          padding: 0;
+          margin: 0;
+        }
+        .gform_submission_error{
+          text-transform: capitalize;
+        }
+        .gform_validation_errors{
+          padding: 7px 14px 7px 0;
+        }
+        .gform_wrapper{
+          .gform_body{
+            .validation_message{
+              bottom: 32px;
+              text-align: left;
+              display: block;
+              @media (max-width: 747px){
+                bottom: 22px;
+              }
+            }
+            legend, label{
+                @include font(jsfn, sbold);
+                text-transform: uppercase;
+                font-size: 14px;
+                line-height: 18.2px;
+                letter-spacing: 0.06em;
+                margin-bottom: 20px;
+              }
+            fieldset{
+              .validation_message{
+                bottom: 15px;
+              }
+              .ginput_container_radio{
+                .gfield_radio{
+                  // display: flex;
+                  // flex-wrap: wrap;
+                  .gchoice{
+                    // flex:1 0 0;
+                    @media (max-width: 574px){
+                      // flex:100% 0 0;
+                    }
+                    label{
+                      @include font(lato, med);
+                      text-transform: capitalize;
+                      font-size: 15px;
+                      line-height: 19.5px;
+                      letter-spacing: 0;
+                    }
+                  }
+                }
+              }
+              .ginput_container_checkbox{
+                .gfield_checkbox{
+                  // display: flex;
+                  // flex-wrap: wrap;
+                  // column-gap: 20px;
+                  .gchoice{
+                    // flex:1 0 0;
+                    @media (max-width: 574px){
+                        // flex:100% 0 0;
+                      }
+                    &:nth-child(odd){
+                      // flex:173px 0 0;
+                      @media (max-width: 574px){
+                        // flex:100% 0 0;
+                      }
+                    }
+                    label{
+                      @include font(lato, med);
+                      text-transform: capitalize;
+                      font-size: 15px;
+                      line-height: 19.5px;
+                      letter-spacing: 0;
+                      margin-right: 0;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        .gfield_description{
+          &.instruction{
+            display: none !important;
+          }
+        }
+      }
+      .title-row{
+        h5{
+          @include font(lato, sbold);
+        }
+        p{
+          margin: 0 0 10px;
+        }
+      }
+      .content-row{
+        background-color: map-get($map: $colors, $key: l_blue);
+        padding: 20px 28px 24px 16px !important;
+        border-radius: 8px;
+        margin-bottom: 40px !important;
+        p{
+          @include font(lato, med);
+          &:last-child{
+            margin-bottom: 0;
+          }
+        }
+        .heading-5{
+          font-size: 20px;
+          line-height: 26px;
+          @include font(lato, sbold);
+          margin-bottom: 10px;
+        }
+        ol, ul{
+          margin-bottom: 0;
+          li{
+            margin: 0 0 10px;
+            &:last-child{
+              margin-bottom: 0;
+            }
+          }
+        }
+        .expect-row{
+          &:not(:last-child){
+            margin-bottom: 24px;
+          }
+        }
+      }
+      .button-row{
+        a{
+          &.button{
+            display: flex;
+            align-items: end;
+            justify-content: center;
+            gap:12px;
+            background-image: url(../img/calendar.svg);
+            background-repeat: no-repeat;
+            background-position: top 12px left calc(50% - 67px);
+            padding: 13px 24px 13px 50px;
+            height: 50px;
+            font-size: 14px;
+            line-height: 18.2px;
+            font-weight: 600;
+            @media (max-width: 475px){
+              background-size: 15px;
+              background-position: top 17px left calc(50% - 48px);
+              font-size: 11px;
+              line-height: 1.7;
+              padding: 16px 24px 13px 50px;
+            }
+            svg{
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+      .tab-form-row{
+        .gform_fields{
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 20px;
+          @media (max-width: 574px){
+            grid-template-columns: repeat(1, 1fr);
+          }
+          .gfield{
+            width: 100%;
+            input{
+              color: map-get($map: $colors, $key: regular_text);
+              margin: 0;
+              &::input-placeholder,
+              &::input-placeholder,
+              &::placeholder{
+                color:#808080;
+              }
+            }
+            select{
+              color: map-get($map: $colors, $key: regular_text);            
+            }
+          }
+        }
+        fieldset{
+          legend{
+            @include font(jsfn, sbold);
+            text-transform: uppercase;
+            font-size: 14px;
+            line-height: 18.2px;
+            letter-spacing: 0.06em;
+            margin-bottom: 20px;
+          }
+          .ginput_container_radio{
+            .gfield_radio{
+              display: flex;
+              flex-wrap: wrap;
+              .gchoice{
+                flex:1 0 0;
+                @media (max-width: 574px){
+                  flex:100% 0 0;
+                }
+                label{
+                  @include font(lato, med);
+                  text-transform: capitalize;
+                  font-size: 15px;
+                  line-height: 19.5px;
+                  letter-spacing: 0;
+                }
+              }
+            }
+          }
+          .ginput_container_checkbox{
+            .gfield_checkbox{
+              display: flex;
+              flex-wrap: wrap;
+              column-gap: 20px;
+              .gchoice{
+                flex:1 0 0;
+                @media (max-width: 574px){
+                    flex:100% 0 0;
+                  }
+                &:nth-child(odd){
+                  flex:173px 0 0;
+                  @media (max-width: 574px){
+                    flex:100% 0 0;
+                  }
+                }
+                label{
+                  @include font(lato, med);
+                  text-transform: capitalize;
+                  font-size: 15px;
+                  line-height: 19.5px;
+                  letter-spacing: 0;
+                  margin-right: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+      .gform_footer{
+        position: relative;
+        input[type=submit]{
+          background-image: url(../img/appointment-icon.svg);
+          background-repeat: no-repeat;
+          background-position: top 12px left calc(50% - 105px);
+          padding: 13px 24px 13px 50px;
+          height: 50px;
+          font-size: 14px;
+          line-height: 2;
+          font-weight: 600;
+          align-items: center;
+          display: flex;
+          justify-content: center;
+          @media (max-width: 475px){
+            background-position: top 17px left calc(50% - 78px);
+            background-size: 15px;
+            font-size: 11px;
+            line-height: 2.2;
+            padding: 16px 24px 13px 50px;
+          }
+        }
+        img.gform_ajax_spinner{
+          right: 0;
+          left: auto;
+          bottom: -12px;
+
+        }
+      }
+      a:not(.button),
+      &:visited {
+        color: map-get($map: $base_colors, $key: link_color);
+        border-bottom: 1px solid map-get($map: $base_colors, $key: link_border_color);
+        padding-bottom: 2px;
+        letter-spacing: -0.5px;
+
+        @include font(lato,reg);
+
+
+        &:hover,
+        &:active {
+          color: map-get($map: $base_colors, $key: link_color_hover);
+          border-color: map-get($map: $base_colors, $key: link_border_color_hover);
+        }
+      }
+    }
+  }
+}
+
+.tabContainer {
+  margin: 0 auto;
+  > .tabs{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    @media (max-width: 767px){
+      overflow-x: auto;
+      overflow-y: hidden;
+    }
+    li{
+      margin: 0;
+      padding: 0;
+      &:before{
+        display: none;
+      }
+      &:first-child{
+        a{
+           background-color: map-get($map: $colors, $key: white);
+        }
+      }
+      &:not(:nth-child(1)){
+        a{
+          background-color: #fff;
+          }
+        }
+      a{
+        display: inline-block;
+        border: 1px solid #164C87;
+        padding: 15px 20px 12px 20px !important;
+        position: relative;
+        top: 1px;
+        font-size: 18px;
+        line-height: 22.5px;
+        font-weight: 500;
+        text-transform: uppercase;
+        border-radius: 8px 8px 0 0;
+        @include font(jsfn, med);
+        background-color: map-get($map: $colors, $key: l_blue);
+        color: map-get($map: $colors, $key: navy_blue);
+        height: 100%;
+        white-space: nowrap;
+        @media only screen and (min-width: 1004px) and (max-width: 1179px){
+          padding: 16px 16px 11px !important;
+        }
+        @media (max-width: 574px){
+          padding: 15px 10px 12px 10px !important;
+          font-size: 16px;
+        }
+        @media (max-width: 475px){
+          padding:10px 10px 5px 10px !important;
+          font-size: 13px;
+          line-height: 1.2;
+        }
+        @media (max-width: 319px){
+          width: 100%;
+          border-radius: 0;
+        }
+        &.active{
+          border-bottom: 1px solid transparent;
+        }
+        span{
+          background: map-get($map: $colors, $key: navy_blue);
+          color: map-get($map: $colors, $key: white);
+          padding: 1px 4px 2px 4px;
+          border-radius: 2px;
+          font-size: 14px;
+          line-height: 17.5px;
+          position: relative;
+          top: -7px;
+          @include font(jsfn, reg);
+          left: 5px;
+          @media (max-width: 475px){
+            font-size: 11px;
+            top: -6px;
+          }
+        }
+        &.make-an-appointment{
+          background-color: map-get($map: $colors, $key: l_blue);
+        }
+      }
+    }
+  }
+  .tabContent {
+    text-align: left;
+    border: 1px solid #164C87;
+    border-top: 0;
+    border-radius: 0 8px 8px 8px;
+    @media (max-width: 375px){
+      border-radius: 0;
+    }
+    @media (max-width: 319px){
+      // border-radius: 0;
+    }
+    > div:not(:first-child){
+      display: none;
+    }
+    .tab_content_item1, .tab_content_item3, .tab_content_item4{
+      padding: 24px 30px 30px 30px;
+      border-radius: 0 8px 8px 8px;
+      border-top: 1px solid #164C87;
+      background-color: map-get($map: $colors, $key: white);
+      @media (max-width: 574px){
+        padding: 24px 20px 20px 20px;
+      }
+      @media (max-width: 375px){
+        border-radius: 0;
+      }
+    }
+    .make-an-appointment{
+      background-color: map-get($map: $colors, $key: l_blue);
+    }
+    .tab_content_item2{
+      padding: 24px 30px 30px 30px;
+      border-radius: 0 8px 8px 8px;
+      border-top: 1px solid #164C87;
+      @media (max-width: 574px){
+        padding: 24px 20px 20px 20px;
+      }
+      .content-row{
+        padding: 0;
+        margin: 0;
+      }
+      .gform_submission_error{
+        text-transform: capitalize;
+      }
+      .gform_validation_errors{
+        padding: 7px 14px 7px 0;
+      }
+      .gform_wrapper{
+        .gform_body{
+          .validation_message{
+            bottom: 32px;
+            text-align: left;
+            display: block;
+            @media (max-width: 747px){
+              bottom: 22px;
+            }
+          }
+          legend, label{
+              @include font(jsfn, sbold);
+              text-transform: uppercase;
+              font-size: 14px;
+              line-height: 18.2px;
+              letter-spacing: 0.06em;
+              margin-bottom: 20px;
+            }
+          fieldset{
+            .validation_message{
+              bottom: 15px;
+            }
+            .ginput_container_radio{
+              .gfield_radio{
+                // display: flex;
+                // flex-wrap: wrap;
+                .gchoice{
+                  // flex:1 0 0;
+                  @media (max-width: 574px){
+                    // flex:100% 0 0;
+                  }
+                  label{
+                    @include font(lato, med);
+                    text-transform: capitalize;
+                    font-size: 15px;
+                    line-height: 19.5px;
+                    letter-spacing: 0;
+                  }
+                }
+              }
+            }
+            .ginput_container_checkbox{
+              .gfield_checkbox{
+                // display: flex;
+                // flex-wrap: wrap;
+                // column-gap: 20px;
+                .gchoice{
+                  // flex:1 0 0;
+                  @media (max-width: 574px){
+                      // flex:100% 0 0;
+                    }
+                  &:nth-child(odd){
+                    // flex:173px 0 0;
+                    @media (max-width: 574px){
+                      // flex:100% 0 0;
+                    }
+                  }
+                  label{
+                    @include font(lato, med);
+                    text-transform: capitalize;
+                    font-size: 15px;
+                    line-height: 19.5px;
+                    letter-spacing: 0;
+                    margin-right: 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .gfield_description{
+        &.instruction{
+          display: none !important;
+        }
+      }
+    }
+    .title-row{
+      h5{
+        @include font(lato, sbold);
+      }
+      p{
+        margin: 0 0 10px;
+      }
+    }
+    .content-row{
+      background-color: map-get($map: $colors, $key: l_blue);
+      padding: 20px 28px 24px 16px !important;
+      border-radius: 8px;
+      margin-bottom: 40px !important;
+      p{
+        @include font(lato, med);
+        &:last-child{
+          margin-bottom: 0;
+        }
+      }
+      .heading-5{
+        font-size: 20px;
+        line-height: 26px;
+        @include font(lato, sbold);
+        margin-bottom: 10px;
+      }
+      ol, ul{
+          margin-bottom: 0;
+          li{
+            margin: 0 0 10px;
+            padding-left: 18px;
+            &:before{
+              color: #333;
+              font-family: "Lato-Regular", arial, sans-serif;
+            }
+            &:last-child{
+              margin-bottom: 0;
+            }
+          }
+        }
+      .expect-row{
+        &:not(:last-child){
+          margin-bottom: 24px;
+        }
+      }
+    }
+    .button-row{
+      a{
+        &.button{
+          display: flex;
+          align-items: end;
+          justify-content: center;
+          gap:12px;
+          background-image: url(../img/calendar.svg);
+          background-repeat: no-repeat;
+          background-position: top 12px left calc(50% - 67px);
+          padding: 13px 24px 13px 50px;
+          height: 50px;
+          font-size: 14px;
+          line-height: 18.2px;
+          font-weight: 600;
+          @media (max-width: 475px){
+            background-size: 15px;
+            background-position: top 17px left calc(50% - 48px);
+            font-size: 11px;
+            line-height: 1.7;
+            padding: 16px 24px 13px 50px;
+          }
+          svg{
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+    .tab-form-row{
+      .gform_fields{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        @media (max-width: 574px){
+          grid-template-columns: repeat(1, 1fr);
+        }
+        .gfield{
+          width: 100%;
+          input{
+            color: map-get($map: $colors, $key: regular_text);
+            margin: 0;
+            &::input-placeholder,
+            &::input-placeholder,
+            &::placeholder{
+              color:#808080;
+            }
+          }
+          select{
+            color: map-get($map: $colors, $key: regular_text);            
+          }
+        }
+      }
+      fieldset{
+        legend{
+          @include font(jsfn, sbold);
+          text-transform: uppercase;
+          font-size: 14px;
+          line-height: 18.2px;
+          letter-spacing: 0.06em;
+          margin-bottom: 20px;
+        }
+        .ginput_container_radio{
+          .gfield_radio{
+            display: flex;
+            flex-wrap: wrap;
+            .gchoice{
+              flex:1 0 0;
+              @media (max-width: 574px){
+                flex:100% 0 0;
+              }
+              label{
+                @include font(lato, med);
+                text-transform: capitalize;
+                font-size: 15px;
+                line-height: 19.5px;
+                letter-spacing: 0;
+              }
+            }
+          }
+        }
+        .ginput_container_checkbox{
+          .gfield_checkbox{
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: 20px;
+            .gchoice{
+              flex:1 0 0;
+              @media (max-width: 574px){
+                  flex:100% 0 0;
+                }
+              &:nth-child(odd){
+                flex:173px 0 0;
+                @media (max-width: 574px){
+                  flex:100% 0 0;
+                }
+              }
+              label{
+                @include font(lato, med);
+                text-transform: capitalize;
+                font-size: 15px;
+                line-height: 19.5px;
+                letter-spacing: 0;
+                margin-right: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+    .gform_footer{
+      position: relative;
+      input[type=submit]{
+        background-image: url(../img/appointment-icon.svg);
+        background-repeat: no-repeat;
+        background-position: top 12px left calc(50% - 105px);
+        padding: 13px 24px 13px 50px;
+        height: 50px;
+        font-size: 14px;
+        line-height: 2;
+        font-weight: 600;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        @media (max-width: 475px){
+          background-position: top 17px left calc(50% - 78px);
+          background-size: 15px;
+          font-size: 11px;
+          line-height: 2.2;
+          padding: 16px 24px 13px 50px;
+        }
+      }
+      img.gform_ajax_spinner{
+        right: 0;
+        left: auto;
+        bottom: -12px;
+
+      }
+    }
+  }
+  .gform_wrapper{
+    .gform_body{
+      .validation_message{
+        text-align: left;
+      }
+      fieldset{
+        .validation_message{
+          bottom: 10px;
+        }
+      }
+    }
+  }
+}
+.tabContainer{
+  .tabContent {
+    .tab_content_item4{
+      .gform_footer input[type=submit]{
+        background-position: top 12px left calc(50% - 37px);
+        padding: 13px 24px 13px 50px;
+        @media (max-width: 475px){
+          background-position: top 18px left calc(50% - 26px);
+          background-size: 15px;
+          font-size: 11px;
+          line-height: 2.2;
+          padding: 16px 24px 13px 50px;
+        }
+      }
+    }
+  }
+}
+// .line {
+//     border-top: 1px solid #164C87;
+//     margin-right: 6px;
+//     @media (max-width: 375px){
+//       margin-right: 0;      
+//     }
+// }
+
+
+/**stap-form**/
+.appointment-form-step{
+  .gform_fields{
+    .gfield--type-radio{
+      text-align: left;
+      width: 100%;
+      .gform-field-label{
+        font-family: "Josefin Sans", arial, sans-serif !important;
+        font-weight: 600 !important;
+        font-style: normal !important;
+        text-transform: uppercase !important;
+        font-size: 14px !important;
+        line-height: 18.2px !important;
+        letter-spacing: 0.06em !important;
+        margin-bottom: 20px !important;
+        color: #333 !important
+      }
+    }
+  }
+}
+
+/**end**/

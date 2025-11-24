@@ -1,0 +1,50 @@
+
+// Animation
+@keyframes placeHolderShimmer {
+
+	0% {
+		background-position: -468px 0;
+	}
+
+	100% {
+		background-position: 468px 0;
+	}
+}
+
+.animated-background {
+	animation-duration: 1.25s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: infinite;
+	animation-name: placeHolderShimmer;
+	animation-timing-function: linear;
+	background: #f6f6f6;
+	background: linear-gradient(to right, #c5c1c1 8%, #c7c6c6 18%, #dbd9d9 33%);
+	background-size: 800px 104px;
+	height: 96px;
+	position: relative;
+}
+
+// Page Elements
+.image {
+	height: 60px;
+	width: 60px;
+	//  background: #F6F6F6;
+	@extend .animated-background;
+}
+
+.text-line {
+	height: 20px;
+	width: 230px;
+	//  background: #F6F6F6;
+	margin: 15px 0;
+
+	@extend .animated-background;
+}
+
+#location-single-title {
+	display: none;
+}
+
+#location_phone_section {
+	display: none;
+}

@@ -1,0 +1,49 @@
+.numbrd-right {
+	width: 49.2%;
+}
+
+.numbrd-left {
+	width: 40.69%;
+
+	h3 {
+		margin-bottom: 33px;
+	}
+
+
+}
+
+.numbered-text-section {
+
+	p {
+
+		@include font(lato, med);
+	}
+}
+
+.nmbrd-count {
+	margin-right: 20px;
+	width: 80px;
+}
+
+.nmbrd-row {
+
+	.nmbrd-content {
+		border-bottom: 1px solid map-get($map: $colors, $key: navy_blue20);
+		margin-bottom: 50px;
+		margin-top: 4px;
+		width: calc(100% - 100px);
+
+		h4, .heading-4  { 
+
+			@include font(lato,bold);
+		}
+	}
+
+	&:last-child {
+
+		.nmbrd-content {
+			border-bottom: none;
+			margin-bottom: 0;
+		}
+	}
+}

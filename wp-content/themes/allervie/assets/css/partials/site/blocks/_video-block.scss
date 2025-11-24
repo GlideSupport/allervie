@@ -1,0 +1,61 @@
+
+.video-section-container {
+
+	.play-icon {
+		width: 92px;
+		height: 92px;
+		background-color: map-get($map: $colors, $key: white);
+		position: relative;
+		border-radius: 50%;
+		transition: all 0.3s ease-in-out;
+
+		&::before {
+			content: "";
+			background-image: url(../img/play-btn-circle.svg);
+			width: 134px;
+			height: 134px;
+			background-position: center;
+			position: absolute;
+			top: -22px;
+			transform-origin: center;
+			left: calc(50% - 67px);
+		}
+
+		img {
+			margin-left: 4px;
+		}
+	}
+
+	&:hover {
+
+		.play-icon {
+			transform: scale(1.1);
+		}
+	}
+
+}
+
+a.video-section:hover {
+
+	.play-icon {
+
+		&::before {
+			animation: rotation 50s infinite linear;
+		}
+	}
+
+}
+
+.video-bg {
+	min-height: 547px;
+	border-radius: 10px;
+	background-position: center bottom;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.overlap-bottom {
+	margin-bottom: -120px;
+	position: relative;
+	z-index: 2;
+}

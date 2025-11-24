@@ -1,0 +1,146 @@
+.tab-icon {
+	margin-bottom: 8px;
+}
+
+a.pt-frm-lnk {
+	background-color: map-get($map: $colors, $key: white);
+	box-shadow: 0 4px 20px rgba(10, 143, 143, 0.15);
+	border-radius: 10px;
+	margin-bottom: 20px;
+	padding: 16px 16px 20px 16px;
+	align-items: flex-start;
+	border-bottom: none;
+	box-sizing: border-box;
+	transition: all 0.3s ease-in-out;
+	align-items: center;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	@media only screen and (max-width: 747px) {
+		padding: 14px;
+	}
+
+	@include column(2, 2%);
+
+	h6 {
+		color: map-get($map: $colors, $key: gray_80);
+		margin-top: 2px;
+		margin-bottom: 0;
+		letter-spacing: -0.1px;
+		transition: all 0.3s ease-in-out;
+	}
+
+	.ext-frm-desc {
+		.heading-6 {
+			margin-top: 0;
+			font-size: 20px;
+			font-weight: 600;
+			font-family: "Lato";
+			color: #333;
+
+			@media(max-width: 747px) {
+				font-size: 18px;
+			}
+		}
+	}
+
+	p {
+		margin-top: 10px;
+		letter-spacing: 0;
+		color: map-get($map: $colors, $key: gray_70);
+		line-height: 1.2;
+
+		@include font(lato, reg);
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	img {
+		margin-right: 16px;
+		max-width: 32px;
+	}
+
+	&:hover {
+		box-shadow: 0 4px 20px rgba(10, 143, 143, 0.35);
+
+		h6 {
+			color: map-get($map: $colors, $key: d_aquamarine);
+
+		}
+	}
+}
+
+.ext-form-links{
+	align-items: flex-start;
+	&.threecol,
+	&.fourcol{
+		gap: 20px;
+		align-items: stretch;
+		@media only screen and (max-width: 747px) {
+			gap: 18px;
+		}
+		a.pt-frm-lnk {
+			align-self: stretch;
+			margin-bottom: 0px;
+			margin-right: 0px;
+		}
+	}
+	&.threecol {
+		a.pt-frm-lnk {
+			width: calc((100% - 40px) / 3);
+			@media only screen and (max-width: 1003px) {
+				width: calc((100% - 20px) / 2);
+			}
+			@media only screen and (max-width: 747px) {
+				width: 100%;
+			}
+		}
+	}
+	&.fourcol {
+		a.pt-frm-lnk {
+			width: calc((100% - 60px) / 4);
+			@media only screen and (max-width: 1179px) {
+				width: calc((100% - 40px) / 3);
+			}
+			@media only screen and (max-width: 1003px) {
+				width: calc((100% - 20px) / 2);
+			}
+			@media only screen and (max-width: 747px) {
+				width: 100%;
+			}
+		}
+	}
+}
+.ext-lnks-sngl-col {
+	.ext-form-links{
+		margin-bottom: 20px;
+		@media (max-width: 747px) {
+			margin-bottom: 18px;
+		}
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+
+	a.pt-frm-lnk {
+
+		padding: 16px 16px 20px 16px;
+
+		@include column(1, 0);
+
+		h6 {
+
+			margin-top: 0;
+		}
+
+		img {
+			margin-right: 0;
+			margin-left: 30px;
+			max-width: 24px;
+		}
+	}
+}

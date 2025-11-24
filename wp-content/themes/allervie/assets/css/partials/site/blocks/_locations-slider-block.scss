@@ -1,0 +1,262 @@
+.rch-type {
+	text-transform: uppercase;
+	letter-spacing: 1px;
+
+	img {
+		max-width: 30px;
+		max-height: 30px;
+		margin-right: 16px;
+	}
+
+	a,
+	a:visited {
+		color: map-get($map: $colors, $key: d_aquamarine);
+		position: relative;
+		display: inline-flex;
+		padding-right: 28px;
+
+		&::after {
+			content: "";
+			background-image: url(../img/location-down-arrow.svg);
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: center;
+			width: 16px;
+			height: 14px;
+			position: absolute;
+			right: 0;
+			top: 7px;
+		}
+
+		&:hover {
+
+			&::after {
+				animation-name: bounce;
+				animation-duration: 0.5s;
+				animation-iteration-count: infinite;
+				animation-direction: alternate;
+				animation-timing-function: ease-in-out;
+
+			}
+		}
+	}
+
+}
+
+@-webkit-keyframes bounce {
+
+	from {
+		top: 7px;
+	}
+
+	to {
+		top: 10px;
+	}
+}
+
+
+.loc-address {
+	margin-bottom: 0;
+
+	h6, .heading-6 {
+		font-size: 18px;
+		margin-bottom: 12px;
+
+		@include font(jsfn, sbold);
+		text-transform: uppercase;
+	}
+
+	p {
+		margin-bottom: 16px;
+
+		a,
+		a:visited {
+			border-bottom: 0;
+			padding-bottom: 0;
+			color: map-get($map: $colors, $key: gray_80);
+		}
+	}
+
+	a {
+
+		@include font(lato, reg);
+		color: map-get($map: $colors, $key: d_aquamarine);
+	}
+}
+
+
+.location-image {
+	width: 50.9%;
+	margin-right: 5%;
+
+	img {
+		max-height: 492px;
+		object-fit: cover;
+	}
+}
+
+.location-text {
+	width: 39%;
+	margin-top: 4px;
+
+
+	h2 {
+		line-height: 1.25;
+	}
+
+	a.button {
+
+		&:first-of-type {
+			margin-bottom: 10px;
+		}
+	}
+
+	p {
+
+		a,
+		a:visited {
+			border-bottom: 0;
+			padding-bottom: 0;
+			color: map-get($map: $colors, $key: gray_80);
+
+			@include font(lato, reg);
+		}
+	}
+
+}
+
+.phone,
+.fax,
+.billing {
+	margin-bottom: 16px;
+
+	img {
+		max-width: 22px;
+		max-height: 22px;
+		margin-right: 9px;
+	}
+
+	p {
+		margin-bottom: 0;
+
+		@include font(lato, reg);
+	}
+
+}
+
+.locations-slider {
+	max-width: 1180px;
+	margin: 0 auto;
+
+	&.owl-carousel .owl-stage-outer,
+	&.owl-carousel {
+		position: initial;
+		display: block;
+
+		.owl-nav button.owl-prev,
+		.owl-nav button.owl-next {
+			top: calc(50% - 60px);
+		}
+	}
+
+	.loc-address p {
+		margin-bottom: 16px !important;
+	}
+}
+
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel .owl-nav button.owl-next {
+
+	top: calc(50% - 24px);
+}
+
+.clear-all-btn {
+	display: none;
+}
+
+.location-filter {
+
+	.banner-text {
+		max-width: 780px;
+		margin: 0 auto;
+	}
+
+	.loc-filter {
+		padding: 14px 30px 12px 20px;
+		margin-bottom: 15px;
+		width: 24%;
+		margin-right: 0%;
+		white-space: nowrap;
+	    -o-text-overflow: ellipsis;
+	    text-overflow: ellipsis;
+	    overflow: hidden;
+	    padding-right: 30px;
+
+		&:nth-child(4n+4) {
+			margin-right: 0%;
+		}
+
+	}
+
+	&.has-filter-btn {
+
+		.loc-filter {
+			width: 21%;
+		}
+
+		.clear-all-btn {
+			display: block;
+			text-align: center !important;
+		}
+	}
+}
+
+#clear-all {
+	width: auto;
+	padding: 14px 20px 12px;
+	line-height: 1;
+	margin-right: 0;
+	font-size: 15px;
+
+	&:hover {
+		box-shadow: 0 4px 20px rgba(8, 141, 141, 0.3);
+	}
+}
+
+.location-filter {
+
+	a.loadmore-btn,
+	a:visited.loadmore-btn {
+		min-width: 260px;
+		margin-top: 80px;
+	}
+}
+
+
+.location-hero-inner {
+	height: 600px;
+}
+
+.loc-filter {
+
+	@include column(4,1%);
+}
+
+
+.loc-type,
+.loc-filter,
+.loc-location {
+	text-transform: uppercase;
+
+	@include font(jsfn , sbold);
+
+}
+
+.loc-type {
+	margin-bottom: 3px;
+}
+
+.loc-location {
+	margin-top: 15px;
+	margin-bottom: 5px;
+}

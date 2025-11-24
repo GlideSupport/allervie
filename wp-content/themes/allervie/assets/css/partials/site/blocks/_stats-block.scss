@@ -1,0 +1,44 @@
+.st-title {
+	width: 35%;
+}
+
+.st-cards {
+	width: 58%;
+
+	a.button {
+
+		margin-top: 30px;
+	}
+
+}
+
+.st-sngl {
+	max-width: 226px;
+	width: 24%;
+	margin: 0 30px;
+
+	h2 {
+		margin-bottom: 16px;
+	}
+}
+
+
+.stats-section {
+
+	span.button.white-btn {
+		display: inline-block;
+		margin-top: 29px;
+		font-size: 15px;
+		padding: 7px 28px 7px;
+		line-height: 1.5;
+		box-shadow: none;
+		letter-spacing: 0;
+
+		@include font(lato,reg);
+		text-transform: initial;
+
+		&:hover {
+			box-shadow: none;
+		}
+	}
+}
