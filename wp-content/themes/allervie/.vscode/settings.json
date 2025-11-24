@@ -69,14 +69,14 @@
 	"[css]": {
 		"editor.formatOnSave": false,
 		"editor.codeActionsOnSave": {
-			"source.fixAll.stylelint": true
+			"source.fixAll.stylelint": "explicit"
 		},
 		"editor.defaultFormatter": "stylelint.vscode-stylelint",
 	},
 	"[scss]": {
 		"editor.formatOnSave": false,
 		"editor.codeActionsOnSave": {
-			"source.fixAll.stylelint": true
+			"source.fixAll.stylelint": "explicit"
 		},
 		"editor.defaultFormatter": "stylelint.vscode-stylelint",
 	},
@@ -106,13 +106,13 @@
 		"html"
 	],
 	"editor.codeActionsOnSave": {
-		"source.fixAll.eslint": true
+		"source.fixAll.eslint": "explicit"
 	},
 	// PHP Beautification
 	"[php]": {
 		"editor.formatOnSave": true,
 		"editor.formatOnPaste": true,
-		"editor.defaultFormatter": "persoderlind.vscode-phpcbf",
+		"editor.defaultFormatter": "DEVSENSE.phptools-vscode",
 	},
 	//PHP CS
 	"phpcs.enable": true,

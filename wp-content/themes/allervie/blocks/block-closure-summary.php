@@ -97,6 +97,7 @@ if(!empty($alrv_blk_closure_select)){
 			$cl_state = get_field('alrv_cpt_cl_state', $cl_id);
 			$cl_city = get_field('alrv_cpt_cl_city', $cl_id);
 			$cl_slct_location = get_field('alrv_cpt_cl_slct_location', $cl_id);
+			$cl_slct_location_auto = get_field('alrv_cpt_cl_slct_location_auto', $cl_id);
 			$cl_description = get_field('alrv_cpt_cl_description', $cl_id);
 			$cl_categories = get_the_terms($cl_id, 'closure-category');
 			$cl_cat_slugs = [];

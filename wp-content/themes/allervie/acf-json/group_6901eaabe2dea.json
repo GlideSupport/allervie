@@ -12,7 +12,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "30",
                 "class": "",
                 "id": ""
             },
@@ -29,7 +29,7 @@
             "name": "alrv_cpt_cl_state",
             "aria-label": "",
             "type": "taxonomy",
-            "instructions": "",
+            "instructions": "All the locations from the selected state will be auto applied for this closure",
             "required": 0,
             "conditional_logic": [
                 [
@@ -41,7 +41,7 @@
                 ]
             ],
             "wrapper": {
-                "width": "50",
+                "width": "32",
                 "class": "",
                 "id": ""
             },
@@ -63,7 +63,7 @@
             "name": "alrv_cpt_cl_city",
             "aria-label": "",
             "type": "taxonomy",
-            "instructions": "",
+            "instructions": "All the locations from the selected city will be auto applied for this closure",
             "required": 0,
             "conditional_logic": [
                 [
@@ -75,7 +75,7 @@
                 ]
             ],
             "wrapper": {
-                "width": "50",
+                "width": "33",
                 "class": "",
                 "id": ""
             },
@@ -109,7 +109,7 @@
                 ]
             ],
             "wrapper": {
-                "width": "",
+                "width": "62",
                 "class": "",
                 "id": ""
             },
@@ -123,6 +123,51 @@
             "filters": [
                 "search",
                 "taxonomy"
+            ],
+            "return_format": "id",
+            "min": "",
+            "max": "",
+            "allow_in_bindings": 0,
+            "elements": "",
+            "bidirectional": 0,
+            "bidirectional_target": []
+        },
+        {
+            "key": "field_692029ce346c4",
+            "label": "Auto Locations",
+            "name": "alrv_cpt_cl_slct_location_auto",
+            "aria-label": "",
+            "type": "relationship",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6901f9b3546f6",
+                        "operator": "==",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_6901f9b3546f6",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "62",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "location"
+            ],
+            "post_status": [
+                "publish"
+            ],
+            "taxonomy": "",
+            "filters": [
+                "search"
             ],
             "return_format": "id",
             "min": "",
@@ -163,7 +208,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "20",
                 "class": "",
                 "id": ""
             },
@@ -181,7 +226,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "40",
                 "class": "",
                 "id": ""
             },
@@ -201,7 +246,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "40",
                 "class": "",
                 "id": ""
             },
@@ -231,5 +276,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1763126213
+    "modified": 1763722102
 }
